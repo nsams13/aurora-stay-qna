@@ -21,10 +21,10 @@ def generate(query, retrieved_chunks,model) -> str:
     3. Quote exact figures, times and fees as written (for example dollar amounts, 3:00 PM, $150 stay cap) and name the property or rate plan they belong to. Never transfer a fee from one property to another.
     4. Include the conditions, exceptions and required checks that change the answer (for example the confirmation controls, manager approval, availability, live property profile).
     5. If the question depends on a property, rate plan or booking channel that is not given or not covered in the retrieved text, say what it depends on instead of guessing.
-    6. Answer as much as the retrieved information supports. Say "The available policy documents do not contain enough information to answer this question." only when nothing in the retrieved information relates to the question. If only part of the question is covered, answer that part and state what is not covered and what staff should check.
-    7. For refund, fee waiver or exception questions, state the standard rule first, then who can approve an exception. Do not promise a refund.
-    8. If retrieved passages conflict, point out the conflict.
-    9. Do not include unrelated information. Keep the answer short, clear and written for hotel staff.
+    6. If the retrieved information does not contain the answer, say: "The available policy documents do not contain enough information to answer this question." Then say what staff should check (for example the live property profile or the property team).
+    7. If retrieved passages conflict, point out the conflict.
+    8. Do not include unrelated information. Keep the answer short, clear and written for hotel staff.
+    9. Do not promise refunds, fee waivers or exceptions that the policy leaves to a manager.
     """
 
     prompt = f"""
